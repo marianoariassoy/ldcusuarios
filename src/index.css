@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.active,
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+input::placeholder {
+  color: inherit;
+}
+
+table thead tr {
+  border: none;
+}
+table tbody tr td,
+table thead tr th {
+  white-space: nowrap;
+  padding-left: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+table tbody tr {
+  border: 0;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
