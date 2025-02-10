@@ -19,13 +19,13 @@ const Serie = ({ serie, match }) => {
 
   useEffect(() => {
     if (error) {
-      toast.error(error, { position: 'bottom-right', className: 'text-sm bg-primary text-white', duration: 4000 })
+      toast.error(error, { position: 'bottom-right', className: 'text-sm', duration: 4000 })
     }
   }, [error])
 
   useEffect(() => {
     if (sended) {
-      toast.success(sended, { position: 'bottom-right', className: 'text-sm bg-base-300 text-white', duration: 4000 })
+      toast.success(sended, { position: 'bottom-right', className: 'text-sm', duration: 4000 })
     }
   }, [sended])
 

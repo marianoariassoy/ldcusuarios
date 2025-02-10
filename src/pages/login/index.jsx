@@ -45,7 +45,7 @@ const index = () => {
 
   useEffect(() => {
     if (error) {
-      toast.error(error, { position: 'bottom-right', className: 'text-sm bg-primary text-white', duration: 4000 })
+      toast.error(error, { position: 'bottom-right', className: 'text-sm', duration: 4000 })
     }
   }, [error])
 

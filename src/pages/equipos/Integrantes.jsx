@@ -26,13 +26,13 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
 
   useEffect(() => {
     if (error) {
-      toast.error(error, { position: 'bottom-right', className: 'text-sm bg-primary text-white', duration: 4000 })
+      toast.error(error, { position: 'bottom-right', className: 'text-sm', duration: 4000 })
     }
   }, [error])
 
   useEffect(() => {
     if (sended) {
-      toast.success(sended, { position: 'bottom-right', className: 'text-sm bg-base-300 text-white', duration: 4000 })
+      toast.success(sended, { position: 'bottom-right', className: 'text-sm', duration: 4000 })
     }
   }, [sended])
 
@@ -70,7 +70,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
     setSending(true)
     setSended(null)
     try {
-      const response = await axios.post(`https://imltenis.com.ar/api/captain/update-team/${id_team}`, team)
+      const response = await axios.post(`https://ligadecapitanes.com.ar/api/captain/update-team/${id_team}`, team)
       if (response.data.success) {
         setSended(response.data.message)
         setSending(false)
