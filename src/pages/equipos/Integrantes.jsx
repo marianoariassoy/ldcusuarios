@@ -16,7 +16,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
   const [error, setError] = useState(null)
   const { data, loading } = useFetch(`/captain/${id_captain}/teams/${id_team}/players`)
   const [team, setTeam] = useState([])
-  const actual_season = 5
+  const actual_season = 6
 
   useEffect(() => {
     if (data) {

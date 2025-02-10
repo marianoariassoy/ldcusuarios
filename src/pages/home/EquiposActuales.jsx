@@ -11,7 +11,7 @@ const CaptainEquipoActuales = ({ id }) => {
   if (loading) return <Loader />
   if (data === null) return <Messages text='No tenes equipos capitaneados en la temporada actual 🥲' />
 
-  const actual_season = 5
+  const actual_season = 6
   let dataFiltered = []
   if (data) {
     dataFiltered = data.filter(item => item.season === actual_season)
