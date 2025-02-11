@@ -6,7 +6,13 @@ import Item from '../../components/ItemSmall'
 const Players = ({ addToTeam }) => {
   const { data, loading } = useFetch(`/players`)
   const [players, setPlayers] = useState([])
-  const [filterText, setFilterText] = useState('')
+  const [query, setQuery] = useState('')
+
+  const removeAccents = str =>
+    str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
 
   useEffect(() => {
     setPlayers(data)
@@ -15,7 +21,7 @@ const Players = ({ addToTeam }) => {
   if (loading) return <Loader />
 
   const handleFilterChange = event => {
-    setFilterText(event.target.value)
+    setQuery(event.target.value)
   }
 
   const addPlayer = player => {
@@ -23,8 +29,8 @@ const Players = ({ addToTeam }) => {
     setPlayers(players.filter(item => item.id !== player.id))
   }
 
-  const filteredPlayers = filterText
-    ? players.filter(player => player.name.toLowerCase().includes(filterText.toLowerCase()))
+  const filteredPlayers = query
+    ? players.filter(player => removeAccents(player.name).includes(removeAccents(query)))
     : []
 
   return (
@@ -33,7 +39,7 @@ const Players = ({ addToTeam }) => {
       <input
         type='text'
         placeholder='Buscar por nombre o apellido'
-        value={filterText}
+        value={query}
         onChange={handleFilterChange}
         className='input input-bordered w-full text-sm max-w-md m-auto'
       />
