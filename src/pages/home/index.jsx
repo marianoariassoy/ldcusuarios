@@ -16,8 +16,8 @@ const JugadoresContainer = () => {
       />
 
       <div className='text-sm'>
-        👋 Bienvenido a tu nuevo panel de control para capitanes. <br />
-        Desde acá podrás ver tus series y equipos para gestionar.
+        👋 Bienvenido a tu nuevo panel de control para capitanes. Desde acá podrás ver tus series y equipos para
+        gestionar.
       </div>
 
       <SeriesPorCargar id={userData.id} />
