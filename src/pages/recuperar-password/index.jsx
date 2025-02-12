@@ -57,8 +57,6 @@ const index = () => {
         )}
 
         <div className='w-full max-w-md m-auto'>
-          {error && <MessagesError text={error} />}
-
           <form
             onSubmit={handleSubmit(onSubmit)}
             className={sended ? 'hidden' : ''}
