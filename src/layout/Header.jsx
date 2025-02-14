@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className='sticky top-0 z-40 mb-3 navbar w-full px-4 bg-base-100/80 backdrop-blur'>
       <div className='navbar-start'>
-        <Menu />
+        <Exit />
       </div>
       <div className='navbar-center text-primary logo-main transition-all'>
         <img
@@ -27,7 +27,7 @@ const Header = () => {
         />
       </div>
       <div className='navbar-end'>
-        <Exit />
+        <Menu />
       </div>
     </header>
   )
