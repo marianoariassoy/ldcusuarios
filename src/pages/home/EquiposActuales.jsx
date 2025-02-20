@@ -43,7 +43,7 @@ const CaptainEquipoActuales = ({ id }) => {
       </div>
 
       <Aviso
-        emoji=''
+        emoji='⚠️'
         text='Podes modificar las listas de buena fe hasta el 1 de marzo.'
       />
     </section>

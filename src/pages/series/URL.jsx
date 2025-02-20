@@ -6,7 +6,7 @@ const URL = ({ url }) => {
     navigator.clipboard
       .writeText(url)
       .then(() => {
-        toast.success('El Link se copio al portapapeles', {
+        toast.success('El enlace se copio al portapapeles', {
           position: 'bottom-right',
           className: 'text-sm bg-base-300 text-white',
           duration: 4000
@@ -24,11 +24,11 @@ const URL = ({ url }) => {
   return (
     <div className='flex flex-col gap-y-3'>
       <Aviso
-        text='Copiá el link para compartir la serie en el grupo de capitanes:'
+        text='Copiá y compartí el enlace en el grupo de capitanes'
         emoji='🔗'
       />
 
-      <div className='text-white bg-primary rounded-lg p-4 text-xs flex items-center justify-between gap-x-2'>
+      <div className='text-black bg-primary rounded-lg p-4 text-xs flex items-center justify-between gap-x-2'>
         <span>{url}</span>
         <button
           onClick={handleCopy}

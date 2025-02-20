@@ -24,7 +24,7 @@ const index = () => {
         description={data.tournament_name}
       />
 
-      <header className='flex gap-x-4 w-full max-w-xs m-auto items-center'>
+      <header className='flex gap-x-4 w-full max-w-xs m-auto'>
         <div className='flex flex-1 flex-col gap-y-2 items-center'>
           <div className='rounded-full overflow-hidden w-20'>
             <Image
@@ -37,7 +37,7 @@ const index = () => {
             <span className='text-secondary'>Local</span>
           </div>
         </div>
-        <div className='text-xl'>⚡</div>
+        <div className='text-xl pt-12'>⚡</div>
         <div className='flex flex-1  flex-col gap-y-2 items-center'>
           <div className='rounded-full overflow-hidden w-20'>
             <Image
@@ -70,7 +70,7 @@ const index = () => {
           })
       )}
 
-      <URL url={`https://imltenis.com.ar/series/${id}`} />
+      <URL url={`https://ligadecapitanes.com.ar/series/${id}`} />
 
       <div className='flex justify-center'>
         <Link

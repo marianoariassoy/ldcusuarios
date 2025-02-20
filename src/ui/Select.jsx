@@ -3,10 +3,10 @@ const Select = ({ options, register, title }) => {
     <select
       className='select select-bordered w-full'
       {...register}
+      defaultValue=''
     >
       <option
         disabled
-        selected
         value=''
       >
         {title}
