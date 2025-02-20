@@ -17,6 +17,7 @@
     "react-hook-form": "^7.50.1",
     "react-hot-toast": "^2.5.1",
     "react-router-dom": "^6.10.0",
+    "react-sortablejs": "^6.1.4",
     "react-spinners": "^0.13.8"
   },
   "devDependencies": {
