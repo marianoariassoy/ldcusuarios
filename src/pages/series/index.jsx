@@ -38,7 +38,7 @@ const index = () => {
           </div>
         </div>
         <div className='text-xl pt-12'>⚡</div>
-        <div className='flex flex-1  flex-col gap-y-2 items-center'>
+        <div className='flex flex-1 flex-col gap-y-2 items-center'>
           <div className='rounded-full overflow-hidden w-20'>
             <Image
               src={data.away_image}
