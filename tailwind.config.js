@@ -6,7 +6,7 @@ module.exports = {
       sans: 'Montserrat, sans-serif'
     }
   },
-  plugins: [require('daisyui'), require('tailwind-scrollbar')],
+  plugins: [require('daisyui')],
   daisyui: {
     themes: [
       {
