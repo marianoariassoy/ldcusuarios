@@ -40,8 +40,8 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
       const response = await axios.get(
         `https://ligadecapitanes.com.ar/api/captain/${id_captain}/teams/${id_team}/players`
       )
-      if (response.data) {
-        setTeam(response.data)
+      if (response) {
+        setTeam(response)
         setLoading(false)
       }
     } catch (error) {
