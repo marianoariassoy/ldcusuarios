@@ -1,4 +1,5 @@
-import { useParams, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import { useAuth } from '../../context'
@@ -7,9 +8,15 @@ import Messages from '../../components/Messages'
 
 const IndexIntegrantes = () => {
   const { userData, isLoggedIn } = useAuth()
-  if (!isLoggedIn) return <Navigate to='/home' />
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!isLoggedIn) navigate('/login')
+  }, [isLoggedIn])
+
   const { id } = useParams()
   const { data, loading } = useFetch(`/captain/${userData.id}/teams/${id}`)
+
   if (loading) return <Loader />
   if (data === null) return <Messages text='No se encontro el equipo 🥲' />
 
@@ -23,8 +30,8 @@ const IndexIntegrantes = () => {
       </header>
 
       <Integrantes
-        id_captain={userData.id}
         id_team={id}
+        id_captain={userData.id}
         id_season={data.season_id}
       />
     </section>

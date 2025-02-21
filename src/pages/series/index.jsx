@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import { useAuth } from '../../context'
@@ -10,10 +10,16 @@ import URL from './URL'
 
 const index = () => {
   const { userData, isLoggedIn } = useAuth()
-  if (!isLoggedIn) return <Navigate to='/home' />
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!isLoggedIn) navigate('/login')
+  }, [isLoggedIn])
+
   const { id } = useParams()
   const { data, loading } = useFetch(`/captain/${userData.id}/series/${id}`)
   const { data: matches, loading: loadingMatches } = useFetch(`/series/${id}/matches`)
+
   if (loading) return <Loader />
   if (data === null) return <Messages text='No se encontro esta serie 🥲' />
 

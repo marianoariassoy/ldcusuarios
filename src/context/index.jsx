@@ -7,8 +7,15 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userData, setUserData] = useState({})
 
+  useEffect(() => {
+    const token = Cookies.get('token-ldc')
+    if (token) {
+      login(token)
+    }
+  }, [])
+
   const login = token => {
-    Cookies.set('token-ldc', token, { expires: 3 })
+    Cookies.set('token-ldc', token, { expires: 14 })
     const decode = jwtDecode(token)
     setUserData(decode)
     setIsLoggedIn(true)
@@ -19,13 +26,6 @@ export const AuthProvider = ({ children }) => {
     setUserData({})
     Cookies.remove('token-ldc')
   }
-
-  useEffect(() => {
-    const token = Cookies.get('token-ldc')
-    if (token) {
-      login(token)
-    }
-  }, [])
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, login, logout, userData, setUserData }}>{children}</AuthContext.Provider>

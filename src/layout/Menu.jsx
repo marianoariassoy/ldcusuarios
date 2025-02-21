@@ -7,7 +7,7 @@ const Menu = () => {
   if (!isLoggedIn) return null
 
   return (
-    <Link to='/home'>
+    <Link to='/'>
       <div className='w-12 h-12 rounded-full overflow-hidden'>
         <Image
           src={userData.image}
