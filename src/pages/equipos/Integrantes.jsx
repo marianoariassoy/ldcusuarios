@@ -54,7 +54,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
   if (loading) return <Loader />
 
   const addToTeam = player => {
-    if (team.length < 20) {
+    if (team.length < 25) {
       const itemExists = team.some(item => item.id === +player.id)
 
       if (!itemExists) {
