@@ -38,7 +38,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
     try {
       setLoading(true)
       const response = await axios.get(
-        `https://ligadecapitanes.com.ar/api/captain/${id_captain}/teams/${id_team}/players`
+        `https://api.ligadecapitanes.com.ar/captain/${id_captain}/teams/${id_team}/players`
       )
       if (response.data) {
         setTeam(response.data)
@@ -81,7 +81,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
     setSending(true)
     setSended(null)
     try {
-      const response = await axios.post(`https://ligadecapitanes.com.ar/api/captain/update-team/${id_team}`, team)
+      const response = await axios.post(`https://api.ligadecapitanes.com.ar/captain/update-team/${id_team}`, team)
       if (response.data.success) {
         setSended(response.data.message)
         setSending(false)

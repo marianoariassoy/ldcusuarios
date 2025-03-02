@@ -38,7 +38,7 @@ const Serie = ({ serie, match }) => {
   const onSubmit = async data => {
     setSending(true)
     setSended(null)
-    const URL = `https://ligadecapitanes.com.ar/api/series/${serie.id}/scores/${match.id}/update`
+    const URL = `https://api.ligadecapitanes.com.ar/series/${serie.id}/scores/${match.id}/update`
     try {
       const response = await axios.post(URL, data)
       if (response.data.success) {

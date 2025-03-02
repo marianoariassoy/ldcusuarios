@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-const apiUrl = 'https://ligadecapitanes.com.ar/api'
+const apiUrl = 'https://api.ligadecapitanes.com.ar'
 
 function useFetch(url) {
   const [data, setData] = useState(null)
