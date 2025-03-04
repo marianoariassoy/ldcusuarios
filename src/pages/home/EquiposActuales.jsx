@@ -23,9 +23,9 @@ const CaptainEquipoActuales = ({ id }) => {
   }
   return (
     <section className='fade-in flex flex-col gap-y-3'>
-      <div className='flex flex-col gap-y-3 bg-white/10 p-4 rounded-lg shadow-lg'>
-        <h1 className='text-sm font-medium text-primary'>Tu equipo</h1>
+      <h1 className='text-sm font-semibold text-primary'>Tu equipo</h1>
 
+      <div className='flex flex-col gap-y-3 bg-white/10 p-4 rounded-lg shadow-lg'>
         <div className='flex flex-col text-sm'>
           {dataFiltered.map((item, index) => (
             <div
@@ -42,10 +42,7 @@ const CaptainEquipoActuales = ({ id }) => {
         </div>
       </div>
 
-      <Aviso
-        emoji='⚠️'
-        text='Podes modificar las listas de buena fe hasta el 1 de marzo. '
-      />
+      <Aviso text='Podes modificar las listas de buena fe hasta el 1 de marzo. ' />
     </section>
   )
 }

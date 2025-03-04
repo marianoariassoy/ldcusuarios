@@ -16,14 +16,15 @@ const Home = () => {
   if (isLoggedIn)
     return (
       <section className='fade-in flex flex-col gap-y-6'>
-        <Header
-          title={`¡Hola ${userData.name.split(' ')[0]}! `}
-          emoji='🙂'
-        />
-
-        <div className='text-sm'>
-          Bienvenido a tu nuevo panel de control para capitanes. Desde acá podrás ver tus series y equipos para
-          gestionar 💪
+        <div>
+          <Header
+            title={`¡Hola ${userData.name.split(' ')[0]}! `}
+            emoji='🙂'
+          />
+          <div className='text-sm mt-3'>
+            Bienvenido a tu nuevo panel de control para capitanes. Desde acá podrás ver tus series y equipos para
+            gestionar 💪
+          </div>
         </div>
 
         <SeriesPorCargar id={userData.id} />

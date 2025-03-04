@@ -1,8 +1,12 @@
-const Aviso = ({ text, emoji }) => {
+import { Info } from '../lib/icons'
+
+const Aviso = ({ text }) => {
   return (
-    <div className='text-secondary text-sm flex gap-x-2 items-center'>
-      <span>{emoji}</span>
-      <span>{text}</span>
+    <div className='text-secondary text-sm flex gap-x-2'>
+      <span className='text-primary'>
+        <Info />
+      </span>
+      <span> {text}</span>
     </div>
   )
 }
