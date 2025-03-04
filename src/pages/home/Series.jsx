@@ -23,7 +23,7 @@ const Fixture = ({ data }) => {
         <tbody>
           {data.map(item => (
             <tr
-              className='hover:bg-base-100 cursor-pointer'
+              className='hover:bg-white/10 cursor-pointer'
               key={item.id}
               onClick={() => handleClick(item.id)}
             >

@@ -12,12 +12,12 @@ const SeriesPorCargar = ({ id }) => {
   return (
     <section className='fade-in flex flex-col gap-y-3'>
       <div className='flex flex-col bg-white/10 p-4 rounded-lg shadow-lg'>
-        <h1 className='text-sm font-medium text-primary'>Próximas series</h1>
+        <h1 className='text-sm font-medium text-primary'>Próxima serie</h1>
         <Series data={data} />
       </div>
 
       <Aviso
-        emoji=''
+        emoji='👉'
         text='En caso de que tu equipo resulte ganador, deberás cargar los resultados correspondientes.'
       />
     </section>

@@ -24,7 +24,7 @@ const CaptainEquipoActuales = ({ id }) => {
   return (
     <section className='fade-in flex flex-col gap-y-3'>
       <div className='flex flex-col gap-y-3 bg-white/10 p-4 rounded-lg shadow-lg'>
-        <h1 className='text-sm font-medium text-primary'>Tus equipos</h1>
+        <h1 className='text-sm font-medium text-primary'>Tu equipo</h1>
 
         <div className='flex flex-col text-sm'>
           {dataFiltered.map((item, index) => (

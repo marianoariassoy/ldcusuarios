@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
