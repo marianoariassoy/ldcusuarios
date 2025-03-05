@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import Item from '../../components/ItemSmall'
+import Item from '../../components/Item'
 import Messages from '../../components/Messages'
 import Aviso from '../../components/Aviso'
 
@@ -18,9 +18,6 @@ const CaptainEquipoActuales = ({ id }) => {
   }
   if (dataFiltered.length === 0) return <Messages text='No tenes equipos capitaneados en la temporada actual 🥲' />
 
-  const handleClick = id => {
-    navigate(`/equipos/${id}`)
-  }
   return (
     <section className='fade-in flex flex-col gap-y-3'>
       <h1 className='text-sm font-semibold text-primary'>Tu equipo</h1>
@@ -30,12 +27,13 @@ const CaptainEquipoActuales = ({ id }) => {
           {dataFiltered.map((item, index) => (
             <div
               key={index}
-              className='py-2 hover:bg-white/10 cursor-pointer'
+              className='py-2'
               onClick={() => handleClick(item.id)}
             >
               <Item
                 title={item.name + ' ' + item.tournament_name}
                 image={item.image}
+                link={`/equipos/${item.id}`}
               />
             </div>
           ))}

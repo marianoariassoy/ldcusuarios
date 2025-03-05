@@ -268,7 +268,7 @@ const Serie = ({ serie, match }) => {
                 <BeatLoader />
               </div>
             ) : (
-              <Button>Confirmar punto</Button>
+              <Button>✅ Confirmar punto</Button>
             )}
           </div>
         ) : null}

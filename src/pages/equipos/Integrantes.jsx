@@ -133,12 +133,12 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 448 512'
-                            className='w-5 h-5 fill-current opacity-50 hover:opacity-100 hover:text-primary'
+                            className='w-5 h-5 fill-current text-secondary hover:opacity-100 hover:text-primary'
                           >
                             <path d='M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z' />
                           </svg>
                         </div>
-                        <span className='font-medium'>{index + 1}</span>
+                        <span className='font-medium text-secondary'>{index + 1}</span>
                       </div>
                     </td>
                     <td>

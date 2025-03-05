@@ -1,13 +1,7 @@
-import { useNavigate } from 'react-router-dom'
-import Item from '../../components/ItemSmall'
+import Item from '../../components/Item'
+import { Link } from 'react-router-dom'
 
 const Fixture = ({ data }) => {
-  const navigate = useNavigate()
-
-  const handleClick = id => {
-    navigate(`/series/${id}`)
-  }
-
   return (
     <div className='overflow-x-auto text-sm scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent'>
       <table className='table w-full mb-3'>
@@ -22,27 +16,28 @@ const Fixture = ({ data }) => {
         </thead>
         <tbody>
           {data.map(item => (
-            <tr
-              className='hover:bg-white/10 cursor-pointer'
-              key={item.id}
-              onClick={() => handleClick(item.id)}
-            >
+            <tr key={item.id}>
               <td scope='row'>
-                <div className='flex gap-x-2 items-center'>
-                  <span className='font-medium text-primary'>{item.date}</span>
-                </div>
+                <Link
+                  to={`/series/${item.id}`}
+                  className='font-medium text-primary hover:underline'
+                >
+                  {item.date}
+                </Link>
               </td>
               <td>{item.hour}</td>
               <td>
                 <Item
                   title={item.home_name}
                   image={item.home_image}
+                  link={`/series/${item.id}`}
                 />
               </td>
               <td>
                 <Item
                   title={item.away_name}
                   image={item.away_image}
+                  link={`/series/${item.id}`}
                 />
               </td>
               <td>{item.tournament_name}</td>
