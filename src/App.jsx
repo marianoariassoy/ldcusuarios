@@ -5,6 +5,7 @@ import Home from './pages/home'
 import Equipos from './pages/equipos'
 import Series from './pages/series'
 import RecuperarPassword from './pages/recuperar-password'
+import RestablecerPassword from './pages/recuperar-password/RestablecerPassword'
 import PageNotFound from './pages/PageNotFound'
 
 const App = () => {
@@ -35,6 +36,10 @@ const App = () => {
           <Route
             path='/recuperar-password'
             element={<RecuperarPassword />}
+          />
+          <Route
+            path='/restablecer-password'
+            element={<RestablecerPassword />}
           />
 
           <Route

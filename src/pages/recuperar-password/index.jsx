@@ -29,7 +29,7 @@ const index = () => {
   const onSubmit = async data => {
     setSending(true)
     try {
-      const response = await axios.post('https://ligadecapitanes.com.ar/api/users/forgotpassword', data)
+      const response = await axios.post('https://api.ligadecapitanes.com.ar/users/forgotpassword', data)
       if (response.data.success) {
         setSended(true)
         setSending(false)
