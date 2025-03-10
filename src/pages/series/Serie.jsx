@@ -273,10 +273,7 @@ const Serie = ({ serie, match }) => {
           </div>
         ) : null}
 
-        <Aviso
-          text='El punto solo lo podrás confirmar una vez, en caso de error, contactate con tu coordinador.'
-          emoji='⚠️'
-        />
+        <Aviso text='Solo podrás confirmar el punto una vez, en caso de error, contactate con tu coordinador.' />
       </form>
 
       <Toaster />

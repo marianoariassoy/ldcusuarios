@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Item from '../../components/Item'
@@ -6,7 +5,6 @@ import Messages from '../../components/Messages'
 import Aviso from '../../components/Aviso'
 
 const CaptainEquipoActuales = ({ id }) => {
-  const navigate = useNavigate()
   const { data, loading } = useFetch(`/captain/${id}/teams`)
   if (loading) return <Loader />
   if (data === null) return <Messages text='No tenes equipos capitaneados en la temporada actual 🥲' />
