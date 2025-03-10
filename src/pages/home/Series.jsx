@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Fixture = ({ data }) => {
   return (
-    <div className='overflow-x-auto text-sm scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent'>
+    <div className='overflow-x-auto text-sm scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent whitespace-nowrap'>
       <table className='table w-full mb-3'>
         <thead>
           <tr>
