@@ -100,7 +100,7 @@ const Serie = ({ serie, match }) => {
             <div className='form-control'>
               <Input
                 type='number'
-                title='Set 3'
+                title='Supertiebreak'
                 placeholder='-'
                 register={register('set3_home', {
                   min: { value: 0, message: 'El valor mínimo es 0' },
@@ -143,7 +143,7 @@ const Serie = ({ serie, match }) => {
             <div className='form-control'>
               <Input
                 type='number'
-                title='Set 3'
+                title='Supertiebreak'
                 placeholder='-'
                 register={register('set3_away', {
                   min: { value: 0, message: 'El valor mínimo es 0' },
