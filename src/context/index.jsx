@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   }, [])
 
   const login = token => {
-    Cookies.set('token-ldc', token, { expires: 14 })
+    Cookies.set('token-ldc', token)
     const decode = jwtDecode(token)
     setUserData(decode)
     setIsLoggedIn(true)
