@@ -1,13 +1,12 @@
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import Messages from '../../components/Messages'
 import Series from './Series'
 import Aviso from '../../components/Aviso'
 
 const SeriesPorCargar = ({ id }) => {
   const { data, loading } = useFetch(`/captain/${id}/series`)
   if (loading) return <Loader />
-  if (!data) return <Messages text='No tenes series por cargar 👍' />
+  if (!data) return null
 
   return (
     <section className='fade-in flex flex-col gap-y-3'>

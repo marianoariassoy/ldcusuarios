@@ -21,9 +21,10 @@ const Home = () => {
             title={`¡Hola ${userData.name.split(' ')[0]}! `}
             emoji='🙂'
           />
-          <div className='text-sm mt-3'>
-            Bienvenido a tu nuevo panel de control para capitanes. Desde acá podrás ver tus series y equipos para
-            gestionar 💪
+          <div className='text-sm mt-3 text-center'>
+            <strong className='block'> Bienvenido al Panel de Capitanes de Liga de Capitanes.</strong>
+            Desde este espacio podrá visualizar sus series, equipos y gestionar todos los aspectos relacionados con la
+            competencia.
           </div>
         </div>
 

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className='p-6 text-sm items-center justify-center flex flex-col text-secondary mt-6'>
       <div>
-        <span className='font-bold'>Liga de Capitanes Usuarios</span>
+        <span className='font-bold'>Liga de Capitanes Usuarios Clausura 2025</span>
       </div>
       <div className='flex gap-x-1 items-center justify-center flex-wrap'>
         <span>

@@ -16,7 +16,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
   const [sending, setSending] = useState(false)
   const [sended, setSended] = useState(false)
   const [error, setError] = useState(null)
-  const actual_season = 6
+  const actual_season = 7
 
   useEffect(() => {
     getPlayers()
@@ -170,10 +170,14 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
             emoji='👉'
           />
           <Aviso
+            text='Máximo de 25 integrantes por equipo.'
+            emoji='🔥'
+          />
+          {/* <Aviso
             text='La lista debe estar ordenada de acuerdo con el nivel actual de cada jugador, colocando primero al de
             mayor nivel y último al de menor nivel.'
             emoji='⚠️'
-          />
+          /> */}
 
           {id_season === actual_season && (
             <div className='text-center mb-3 mt-3'>
