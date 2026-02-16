@@ -2,9 +2,9 @@ const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className='p-6 text-sm items-center justify-center flex flex-col text-secondary mt-6'>
+    <footer className='p-6 items-center justify-center flex flex-col text-secondary mt-6'>
       <div>
-        <span className='font-bold'>Liga de Capitanes Usuarios Clausura 2025</span>
+        <span className='font-bold'>Liga de Capitanes {year}</span>
       </div>
       <div className='flex gap-x-1 items-center justify-center flex-wrap'>
         <span>
@@ -17,8 +17,6 @@ const Footer = () => {
             hola@ligadecapitanes.com.ar
           </a>
         </span>
-        <span> - </span>
-        <span>Hecho con ❤︎ en {year}</span>
       </div>
     </footer>
   )

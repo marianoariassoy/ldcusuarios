@@ -6,11 +6,11 @@ const Exit = () => {
 
   return (
     <button
-      className='text-2xl'
+      className='btn'
       onClick={logout}
       title='Cerrar sesión'
     >
-      👋
+      Cerrar
     </button>
   )
 }

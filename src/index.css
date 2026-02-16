@@ -8,7 +8,9 @@
   min-height: 100vh;
   color: #6f6f6f;
 }
-
+body {
+  font-size: 15px;
+}
 input::placeholder {
   color: inherit;
 }

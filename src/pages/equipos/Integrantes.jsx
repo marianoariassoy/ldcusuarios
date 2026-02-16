@@ -16,7 +16,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
   const [sending, setSending] = useState(false)
   const [sended, setSended] = useState(false)
   const [error, setError] = useState(null)
-  const actual_season = 7
+  const actual_season = 8
 
   useEffect(() => {
     getPlayers()
@@ -98,17 +98,17 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
 
   return (
     <section className='fade-in flex flex-col gap-y-4'>
-      {team && !team.length > 0 && <Messages text='El equipo todavia no tiene integrantes 🥲' />}
+      {team && !team.length > 0 && <Messages text='El equipo todavia no tiene integrantes' />}
 
       {team && team.length > 0 && (
         <>
           <div>
-            <h1 className='text-primary text-sm text-center'>
+            <h1 className='text-primary text-center'>
               🔥 <span className='font-semibold'>Lista de buena fe</span> ({team.length} jugadores)
             </h1>
           </div>
 
-          <div className='text-sm overflow-x-auto w-full'>
+          <div className='overflow-x-auto w-full'>
             <table className='table mb-3'>
               <thead>
                 <tr>
@@ -133,7 +133,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
                             viewBox='0 0 448 512'
-                            className='w-5 h-5 fill-current text-secondary hover:opacity-100 hover:text-primary'
+                            className='w-8 h-8 fill-current text-secondary hover:opacity-100 hover:text-primary'
                           >
                             <path d='M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z' />
                           </svg>
@@ -153,7 +153,7 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
                           xmlns='http://www.w3.org/2000/svg'
                           viewBox='0 0 512 512'
                           fill='currentColor'
-                          className='w-4 h-4 hover:text-primary'
+                          className='w-6 h-6 hover:text-primary'
                         >
                           <path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 232l144 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z' />
                         </svg>
@@ -173,11 +173,6 @@ const Integrantes = ({ id_captain, id_team, id_season }) => {
             text='Máximo de 25 integrantes por equipo.'
             emoji='🔥'
           />
-          {/* <Aviso
-            text='La lista debe estar ordenada de acuerdo con el nivel actual de cada jugador, colocando primero al de
-            mayor nivel y último al de menor nivel.'
-            emoji='⚠️'
-          /> */}
 
           {id_season === actual_season && (
             <div className='text-center mb-3 mt-3'>

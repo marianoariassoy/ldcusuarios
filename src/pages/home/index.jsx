@@ -17,12 +17,9 @@ const Home = () => {
     return (
       <section className='fade-in flex flex-col gap-y-6'>
         <div>
-          <Header
-            title={`¡Hola ${userData.name.split(' ')[0]}! `}
-            emoji='🙂'
-          />
-          <div className='text-sm mt-3 text-center'>
-            <strong className='block'> Bienvenido al Panel de Capitanes de Liga de Capitanes.</strong>
+          <Header title={`¡Hola ${userData.name.split(' ')[0]}! `} />
+          <div className='mt-3 text-center'>
+            <strong className='block'> Bienvenido al panel de capitanes de Liga de Capitanes.</strong>
             Desde este espacio podrá visualizar sus series, equipos y gestionar todos los aspectos relacionados con la
             competencia.
           </div>
